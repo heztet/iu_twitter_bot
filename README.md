@@ -8,7 +8,7 @@ More tweet options can be added to the arrays in `get_responses()`, and pictures
 
 ## Setup
 ### Twitter API Keys
-To run the bot, download these files into a directory, then create a new file `greyhouse_status_keys.py` in the same directory that has the following information: 
+To run the bot, download these files into a directory, then create a new file `twitter_keys.py` in the same directory that has the following information: 
 ```
 CONSUMER_KEY = <key as string>
 CONSUMER_SECRET = <secret as string>
