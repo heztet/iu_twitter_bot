@@ -1,7 +1,7 @@
 import tweepy
 import pushover
 import time
-from datetime import datetime, timedelta
+from datetime import date
 
 # Validate that Twitter API keys can be imported
 try:
@@ -39,7 +39,16 @@ def send_tweet(string):
 
 def get_tweet():
 	'''Returns the tweet to send'''
-	return "It's Novemeber 18, 2017 AND IU STILL SUCKS"
+	current_date = date.today()
+	
+	year = current_date.strftime('%Y')
+	month = current_date.strftime('%B')
+	day = current_date.strftime('%d')
+	if day[0] == '0':
+		day = day[1]
+	
+	date_string = '{} {}, {}'.format(month, day, year)
+	return 'It\'s {} AND IU STILL SUCKS'.format(date_string)
 
 if __name__ == '__main__':
 	try:
